@@ -59,4 +59,9 @@ public class CardTest {
             assertThat(hashCodes, not(hasItem(card.hashCode())));
         }
     }
+
+    @Test
+    public void testEqualsOtherObjects() {
+
+    }
 }
