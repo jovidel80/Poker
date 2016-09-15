@@ -17,14 +17,17 @@ public class CardTest {
         Card.Rank rankResult = instance.getRank();
         assertEquals(expRank, rankResult);
     }
-    
-    @Test(expected = IllegalArgumentException.class) public void testContructorSuitNull() {
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testContructorSuitNull() {
         System.out.println("card(SuitNull)");
         Card.Suit expSuit = null;
         Card.Rank expRank = Card.Rank.TWO;
         Card instance = new Card(expSuit, expRank);
     }
-    @Test(expected = IllegalArgumentException.class) public void testContructorRankNull() {
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testContructorRankNull() {
         System.out.println("card(RankNull)");
         Card.Suit expSuit = Card.Suit.CLUB;
         Card.Rank expRank = null;
