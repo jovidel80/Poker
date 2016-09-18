@@ -1,6 +1,6 @@
 package com.poker.api.core;
 
-public final class Card {
+public final class  Card {
 
     private static final String STRING_RANK_CARDS = "23456789TJQKA";
 

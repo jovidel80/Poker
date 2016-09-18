@@ -8,6 +8,7 @@ import java.util.Set;
 import static org.hamcrest.CoreMatchers.hasItem;
 import static org.hamcrest.CoreMatchers.not;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertThat;
 
 public class CardTest {
@@ -65,6 +66,42 @@ public class CardTest {
 
     @Test
     public void testEqualsOtherObjects() {
+        System.out.println("equalsOtherObjects");
+        Card card = new Card(Card.Suit.CLUB, Card.Rank.ACE);
+        assertNotEquals("card: " + card + " != null", card, null); 
+        assertNotEquals("card: " + card + " != 0", card, 0); 
+        assertNotEquals("card: " + card + " != \"2C\"", card, "2C");
+    }
 
+    @Test
+    public void testEquals() {
+        System.out.println("equals");
+        int i = 0;
+        for (Card card0 : getAllCards()) {
+            int j = 0;
+            for (Card card1 : getAllCards()) {
+                if (i == j) {
+                    assertEquals(card0, card1);
+                }
+                j++;
+            }
+            i++;
+        }
+    }
+
+    @Test
+    public void testEqualsDistinct() {
+        System.out.println("equals distinct");
+        int i = 0;
+        for (Card card0 : getAllCards()) {
+            int j = 0;
+            for (Card card1 : getAllCards()) {
+                if (i != j) {
+                    assertNotEquals(card0, card1);
+                }
+                j++;
+            }
+            i++;
+        }
     }
 }
