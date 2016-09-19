@@ -1,4 +1,4 @@
-package org.util.exceptions;
+package com.util.exceptions;
 
 import java.text.MessageFormat;
 
