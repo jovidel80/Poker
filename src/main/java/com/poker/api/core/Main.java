@@ -23,7 +23,7 @@ public class Main {
         Set<Card> cards = new HashSet<>();
         Card[] cards2Insert = {new Card(Card.Suit.CLUB, Card.Rank.ACE), 
                 new Card(Card.Suit.CLUB, Card.Rank.TWO),
-                new Card(Card.Suit.CLUB, Card.Rank.TRHEE),
+                new Card(Card.Suit.CLUB, Card.Rank.THREE),
                 new Card(Card.Suit.CLUB, Card.Rank.ACE)
         };
         for (Card card : cards2Insert) {
